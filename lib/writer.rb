@@ -1,6 +1,5 @@
 class Writer
-
-  def initialize 
+  def initialize
     
   end
 end
