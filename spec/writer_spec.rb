@@ -12,7 +12,7 @@ RSpec.describe Writer do
     new_message = 'message_spec.txt'
     writer = Writer.new(new_message)
     
-    expect(writer.message).to eq("sample message")
+    expect(writer.message).to eq("sample")
   end
 
 
