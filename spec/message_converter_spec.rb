@@ -3,6 +3,9 @@ require './lib/message_converter'
 
 RSpec.describe 'Message_converter' do 
   it 'will exist' do 
+    new_message = 'message_spec.txt'
+    writer = Writer.new(new_message)
+    message = writer.message
     message_converter = MessageConverter.new(message)
     
     expect(message_converter).to be_a(MessageConverter)
