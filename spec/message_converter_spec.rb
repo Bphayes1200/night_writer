@@ -1,4 +1,5 @@
-require './writer'
+require './lib/writer'
+require './lib/message_converter'
 
 RSpec.describe 'Message_converter' do 
   it 'will exist' do 
