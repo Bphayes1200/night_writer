@@ -19,6 +19,7 @@ RSpec.describe 'Message_converter' do
 
     expect(message_converter.message_array).to eq(["s", "a", "m", "p", "l", "e"])
   end
+
   it 'will have a hash of letters to brail' do 
     new_message = 'message_spec.txt'
     writer = Writer.new(new_message)
@@ -26,5 +27,14 @@ RSpec.describe 'Message_converter' do
     message_converter = MessageConverter.new(message)
 
     expect(message_converter.braille_alphabet).to be_a(Hash)
+  end
+
+  it 'will find all of the braiile letters for a message' do 
+    new_message = 'message_spec.txt'
+    writer = Writer.new(new_message)
+    message = writer.message
+    message_converter = MessageConverter.new(message)
+
+    expect(message_converter.find_all_braille).to eq([[".0", "0.", "0."], ["0.", "..", ".."], ["00", "..", "0."], ["00", "0.", "0."],  ["0.", "0.", "0."], ["0.", ".0", ".."]])
   end
 end
