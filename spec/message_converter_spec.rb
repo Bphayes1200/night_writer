@@ -37,4 +37,15 @@ RSpec.describe 'Message_converter' do
 
     expect(message_converter.find_all_braille).to eq([[".0", "0.", "0."], ["0.", "..", ".."], ["00", "..", "0."], ["00", "0.", "0."],  ["0.", "0.", "0."], ["0.", ".0", ".."]])
   end
+
+  it 'will convert message to braile' do 
+    new_message = 'message_spec.txt'
+    writer = Writer.new(new_message)
+    message = writer.message
+    message_converter = MessageConverter.new(message)
+
+    expect(message_converter.convert).to eq(".00.00000.0.
+                                             0.....0.0..0
+                                             0...0.0.0...")
+  end
 end
