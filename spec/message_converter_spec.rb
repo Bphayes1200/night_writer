@@ -1,5 +1,4 @@
-require './lib/writer'
-require './lib/message_converter'
+require_relative 'spec_helper.rb'
 
 RSpec.describe 'Message_converter' do 
   it 'will exist' do 
