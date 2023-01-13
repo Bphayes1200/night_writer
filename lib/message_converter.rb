@@ -49,7 +49,7 @@ class MessageConverter
     all_letters
   end
 
-  def convert
+  def convert_to_braille
     formatted_letters = []
     top_row = find_all_braille.map { |letter| letter[0]}
     middle_row = find_all_braille.map { |letter| letter[1]}
@@ -64,7 +64,7 @@ class MessageConverter
 
   def create_new_file(file)
     new_file = File.open(file, "w")
-    new_file.write(convert)
+    new_file.write(convert_to_braille)
     new_file.close
   end
 end
