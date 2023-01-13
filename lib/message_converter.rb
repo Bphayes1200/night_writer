@@ -35,4 +35,16 @@ class MessageConverter
 
       }
   end
+
+  def find_all_braille
+    all_letters = []
+    @message_array.each do |letter|
+      braille_alphabet.find do |key, value|
+        if key == letter
+          all_letters << value
+        end
+      end 
+    end
+    all_letters
+  end
 end
