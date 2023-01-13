@@ -59,7 +59,12 @@ class MessageConverter
     
     final_array = format_array.map { |array| array.join}
     braille = final_array.join("\n")
-    puts braille
     braille
+  end
+
+  def create_new_file(file)
+    new_file = File.open(file, "w")
+    new_file.write(convert)
+    new_file.close
   end
 end

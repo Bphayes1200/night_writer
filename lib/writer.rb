@@ -4,5 +4,6 @@ class Writer
   def initialize(file) 
     file = File.open(file, "r")
     @message = file.read
+    file.close
   end
 end
