@@ -44,8 +44,6 @@ RSpec.describe 'Message_converter' do
     message = writer.message
     message_converter = MessageConverter.new(message)
 
-    expect(message_converter.convert).to eq(".00.00000.0.
-                                             0.....0.0..0
-                                             0...0.0.0...")
+    expect(message_converter.convert).to eq(".00.00000.0.\n0.....0.0..0\n0...0.0.0...")
   end
 end

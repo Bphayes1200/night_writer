@@ -48,4 +48,18 @@ class MessageConverter
     end
     all_letters
   end
+
+  def convert
+    formatted_letters = []
+    top_row = find_all_braille.map { |letter| letter[0]}
+    middle_row = find_all_braille.map { |letter| letter[1]}
+    bottom_row = find_all_braille.map { |letter| letter[2]}
+
+    format_array = [top_row, middle_row, bottom_row]
+    
+    final_array = format_array.map { |array| array.join}
+    braille = final_array.join("\n")
+    puts braille
+    braille
+  end
 end
