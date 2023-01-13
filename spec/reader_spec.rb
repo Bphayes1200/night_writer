@@ -10,8 +10,6 @@ RSpec.describe Reader do
     braille = 'braille_spec.txt'
     reader = Reader.new(braille)
     
-    expect(reader.message).to eq(".00.00000.0.
-                                  0.....0.0..0
-                                  0...0.0.0...")
+    expect(reader.message).to eq( ".00.00000.0.\n0.....0.0..0\n0...0.0.0...")
   end
 end
