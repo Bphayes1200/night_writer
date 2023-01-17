@@ -16,7 +16,8 @@ class MessageConverter
       "f" => ["00", "0.", ".."],
       "g" => ["00", "00", ".."],
       "h" => ["0.", "00", ".."],
-      "i" => [".0", "00", ".."],
+      "i" => [".0", "0.", ".."],
+      "j" => [".0", "00", ".."],
       "k" => ["0.", "..", "0."],
       "l" => ["0.", "0.", "0."],
       "m" => ["00", "..", "0."],
@@ -41,12 +42,12 @@ class MessageConverter
   def find_all_braille
     all_letters = []
     @message_array.each do |letter|
-      braille_alphabet.find do |key, value|
-        if key == letter
-          all_letters << value
-        end
+        braille_alphabet.find do |key, value|
+          if key == letter
+            all_letters << value
+         end
+        end 
       end 
-    end
     all_letters
   end
 
@@ -61,6 +62,7 @@ class MessageConverter
     final_array = format_array.map { |array| array.join}
     braille = final_array.join("\n")
     braille
+    # require 'pry'; binding.pry
   end
 
   def create_new_braille_file(file)
@@ -103,7 +105,11 @@ class MessageConverter
         end
       end
     end
-    string_array.join
+    final_string = string_array.join
+    if final_string.length >= 80
+      final_string.insert(81, "\n")
+    end
+    final_string
   end
 
   def create_new_english_file(file)
