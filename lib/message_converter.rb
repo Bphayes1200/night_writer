@@ -62,7 +62,7 @@ class MessageConverter
     braille
   end
 
-  def create_new_file(file)
+  def create_new_braille_file(file)
     new_file = File.open(file, "w")
     new_file.write(convert_to_braille)
     new_file.close
@@ -100,5 +100,11 @@ class MessageConverter
       end
     end
     string_array.join
+  end
+
+  def create_new_english_file(file)
+    new_file = File.open(file, "w")
+    new_file.write(braille_to_english)
+    new_file.close
   end
 end
