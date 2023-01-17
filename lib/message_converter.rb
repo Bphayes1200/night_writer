@@ -89,4 +89,16 @@ class MessageConverter
     end
      final_array = added_strings.flatten.each_slice(3).to_a
   end
+
+  def braille_to_english
+    string_array = []
+    format_incoming_braille.each do |letter|
+      braille_alphabet.each do |key, value|
+        if value == letter
+          string_array << key
+        end
+      end
+    end
+    string_array.join
+  end
 end
