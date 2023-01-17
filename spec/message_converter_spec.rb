@@ -63,4 +63,22 @@ RSpec.describe 'Message_converter' do
 
     expect(message_converter.braille_to_english).to eq("sample")
   end
+
+  it 'will check to see if a new message file is created' do 
+    new_message = 'braille_spec.txt'
+    reader = Reader.new(new_message)
+    message = reader.message
+    message_converter = MessageConverter.new(message)
+
+    expect(message_converter.create_new_english_file('message_spec.txt')).to eq("Created new file 'message_spec.txt' containing 6 characters")
+  end
+
+  it 'will check to see if a new braille file is created' do 
+    new_message = 'message_spec.txt'
+    writer = Writer.new(new_message)
+    message = writer.message
+    message_converter = MessageConverter.new(message)
+
+    expect(message_converter.create_new_braille_file('braille_spec.txt')).to eq("Created new file 'braille_spec.txt' containing 6 characters")
+  end
 end

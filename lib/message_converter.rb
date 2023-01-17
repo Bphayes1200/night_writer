@@ -2,7 +2,8 @@ class MessageConverter
   attr_reader :message_array
 
   def initialize(message)
-    @message_array = message.split(//)
+    incoming_letters =  message.split(//)
+    @message_array = incoming_letters.map { |letter| letter.downcase}
   end
 
   def braille_alphabet
@@ -54,9 +55,9 @@ class MessageConverter
     top_row = find_all_braille.map { |letter| letter[0]}
     middle_row = find_all_braille.map { |letter| letter[1]}
     bottom_row = find_all_braille.map { |letter| letter[2]}
-
+    find_all_spaces = find_all_braille.find_all{ |character| character == ["..", "..", ".."]}
+    @length_of_message = ((top_row.count * 2) / 2) - find_all_spaces.count
     format_array = [top_row, middle_row, bottom_row]
-    
     final_array = format_array.map { |array| array.join}
     braille = final_array.join("\n")
     braille
@@ -66,6 +67,9 @@ class MessageConverter
     new_file = File.open(file, "w")
     new_file.write(convert_to_braille)
     new_file.close
+    output_message =  "Created new file '#{file}' containing #{@length_of_message} characters"
+    puts output_message
+    output_message
   end
 
   def format_incoming_braille
@@ -106,5 +110,8 @@ class MessageConverter
     new_file = File.open(file, "w")
     new_file.write(braille_to_english)
     new_file.close
+    output_message = "Created new file '#{file}' containing #{braille_to_english.length} characters"
+    puts output_message
+    output_message
   end
 end
