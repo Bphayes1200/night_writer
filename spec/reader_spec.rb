@@ -1,4 +1,4 @@
-require './lib/reader'
+require_relative 'spec_helper.rb'
 
 RSpec.describe Reader do 
   it 'will exist' do 
