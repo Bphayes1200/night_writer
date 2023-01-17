@@ -43,6 +43,24 @@ RSpec.describe 'Message_converter' do
     message = writer.message
     message_converter = MessageConverter.new(message)
 
-    expect(message_converter.convert).to eq(".00.00000.0.\n0.....0.0..0\n0...0.0.0...")
+    expect(message_converter.convert_to_braille).to eq(".00.00000.0.\n0.....0.0..0\n0...0.0.0...")
+  end
+
+  it 'will format incoming braille to be converted' do 
+    new_message = 'braille_spec.txt'
+    reader = Reader.new(new_message)
+    message = reader.message
+    message_converter = MessageConverter.new(message)
+
+    expect(message_converter.format_incoming_braille).to eq([[".0", "0.", "0."], ["0.", "..", ".."], ["00", "..", "0."], ["00", "0.", "0."],  ["0.", "0.", "0."], ["0.", ".0", ".."]])
+  end
+
+  it 'will return the string of the decoded message' do 
+    new_message = 'braille_spec.txt'
+    reader = Reader.new(new_message)
+    message = reader.message
+    message_converter = MessageConverter.new(message)
+
+    expect(message_converter.braille_to_english).to eq("sample")
   end
 end

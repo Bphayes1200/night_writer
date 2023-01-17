@@ -49,7 +49,7 @@ class MessageConverter
     all_letters
   end
 
-  def convert
+  def convert_to_braille
     formatted_letters = []
     top_row = find_all_braille.map { |letter| letter[0]}
     middle_row = find_all_braille.map { |letter| letter[1]}
@@ -62,9 +62,49 @@ class MessageConverter
     braille
   end
 
-  def create_new_file(file)
+  def create_new_braille_file(file)
     new_file = File.open(file, "w")
-    new_file.write(convert)
+    new_file.write(convert_to_braille)
+    new_file.close
+  end
+
+  def format_incoming_braille
+    find_new_line = @message_array.find_index("\n")
+    top_row = Array.new(@message_array[0..(find_new_line - 1)])
+    middle_row = Array.new(@message_array[(find_new_line + 1)..(find_new_line * 2)])
+    bottom_row = Array.new(@message_array[((find_new_line * 2) + 2)..((find_new_line * 3)+ 1)])
+    line_array = [top_row, middle_row, bottom_row]
+    transposed_array = line_array.transpose
+    added_strings = []
+    top_row.count.times do 
+      line_array.each do |array|
+        if array != []
+        characters = []
+        first_element = array.shift
+        second_element = array.shift
+        characters << (first_element + second_element)
+        added_strings << characters
+        end 
+      end
+    end
+     final_array = added_strings.flatten.each_slice(3).to_a
+  end
+
+  def braille_to_english
+    string_array = []
+    format_incoming_braille.each do |letter|
+      braille_alphabet.each do |key, value|
+        if value == letter
+          string_array << key
+        end
+      end
+    end
+    string_array.join
+  end
+
+  def create_new_english_file(file)
+    new_file = File.open(file, "w")
+    new_file.write(braille_to_english)
     new_file.close
   end
 end
