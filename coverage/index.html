@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-17T17:32:32-07:00">2023-01-17T17:32:32-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-17T17:44:04-07:00">2023-01-17T17:44:04-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         23.93
+         28.59
        </span>
     </span> hits/line
     )
@@ -39,12 +39,12 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>5</b> files in total.
+    <b>3</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>94</b> relevant lines,
-    <span class="green"><b>94</b> lines covered</span> and
+    <b>78</b> relevant lines,
+    <span class="green"><b>78</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -93,33 +93,11 @@
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#a8863eda9c0c6a5e1da61b5fc99b76f43f2eb016" class="src_link" title="lib/writer.rb">lib/writer.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">6</td>
-            <td class="cell--number">6</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.50</td>
-            
-          </tr>
-        
-          <tr class="t-file">
             <td class="strong t-file__name"><a href="#1b24a6ddfddcb4e7ec8b49c32e7382825e2d92b5" class="src_link" title="spec/reader_spec.rb">spec/reader_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">15</td>
             <td class="cell--number">9</td>
             <td class="cell--number">9</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
-            
-          </tr>
-        
-          <tr class="t-file">
-            <td class="strong t-file__name"><a href="#2efd0c5ff3d9e010a37039e7b9341e86c753142e" class="src_link" title="spec/writer_spec.rb">spec/writer_spec.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">19</td>
-            <td class="cell--number">10</td>
-            <td class="cell--number">10</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -1559,7 +1537,7 @@
 
             
 
-            <code class="ruby">    new_file = File.open(file, &#39;r&#39;)</code>
+            <code class="ruby">    new_file = File.open(file, &quot;r&quot;)</code>
           </li>
         </div>
       
@@ -1577,136 +1555,6 @@
         <div>
           <li class="covered" data-hits="11" data-linenumber="7">
             <span class="hits">11</span>
-            
-
-            
-
-            <code class="ruby">    new_file.close</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="8">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
-            
-
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-    </ol>
-  </pre>
-</div>
-
-      
-        <div class="source_table" id="a8863eda9c0c6a5e1da61b5fc99b76f43f2eb016">
-  <div class="header">
-    <h3>lib/writer.rb</h3>
-    <h4>
-      <span class="green">
-  100.0%
-</span>
-
-      lines covered
-    </h4>
-
-    
-
-    <div class="t-line-summary">
-      <b>6</b> relevant lines.
-      <span class="green"><b>6</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-
-    
-
-  </div>
-
-  <pre>
-    <ol>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">class Writer</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="2">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  attr_reader :message</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="3">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def initialize(file) </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="5">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    new_file = File.open(file, &quot;r&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="6">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    @message = new_file.read</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="7">
-            <span class="hits">2</span>
             
 
             
@@ -1924,246 +1772,6 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="15">
-            
-            
-
-            
-
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-    </ol>
-  </pre>
-</div>
-
-      
-        <div class="source_table" id="2efd0c5ff3d9e010a37039e7b9341e86c753142e">
-  <div class="header">
-    <h3>spec/writer_spec.rb</h3>
-    <h4>
-      <span class="green">
-  100.0%
-</span>
-
-      lines covered
-    </h4>
-
-    
-
-    <div class="t-line-summary">
-      <b>10</b> relevant lines.
-      <span class="green"><b>10</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-
-    
-
-  </div>
-
-  <pre>
-    <ol>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">require &#39;./lib/writer&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="2">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">RSpec.describe Writer do </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  it &#39;will exist&#39; do </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    new_message = &#39;message_spec.txt&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    writer = Writer.new(new_message)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(writer).to be_a(Writer)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  it &#39;will read a file and puts a message&#39; do </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    new_message = &#39;message_spec.txt&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    writer = Writer.new(new_message)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="14">
-            
-            
-
-            
-
-            <code class="ruby">    </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(writer.message).to eq(&quot;sample&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="16">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="17">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="18">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="19">
             
             
 

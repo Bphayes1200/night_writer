@@ -1,19 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/BrianHayes/1mod/projects/night_writer/lib/writer.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          2,
-          2,
-          2,
-          null,
-          null
-        ]
-      },
       "/Users/BrianHayes/1mod/projects/night_writer/lib/message_converter.rb": {
         "lines": [
           1,
@@ -168,31 +155,8 @@
           null,
           null
         ]
-      },
-      "/Users/BrianHayes/1mod/projects/night_writer/spec/writer_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1674001952
+    "timestamp": 1674002644
   }
 }
