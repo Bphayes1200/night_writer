@@ -105,11 +105,7 @@ class MessageConverter
         end
       end
     end
-    final_string = string_array.join
-    if final_string.length >= 80
-      final_string.insert(81, "\n")
-    end
-    final_string
+    string_array.join
   end
 
   def create_new_english_file(file)
